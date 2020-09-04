@@ -1,0 +1,66 @@
+.btn{
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.error{
+    color:red;
+}
+
+.success{
+    color:green;
+}
+
+.controls button{
+    padding:5px;
+    width: 20%;
+    margin: 0px 1.5%;
+}
+
+.controls button:hover{
+    background-color: honeydew;
+}
+
+.container{
+    width: 80%;
+    margin:0px auto;
+}
+
+.header{
+    width:100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#statusMsg{
+    margin: 5px auto;
+    width:30%;
+    font-weight: bolder;
+}
+
+#data #table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin:5px;
+}
+
+td{
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{
+    padding: 5px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#pagination{
+    width: 20%;
+    margin: 5px auto;
+}
