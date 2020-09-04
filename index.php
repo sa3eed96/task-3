@@ -5,22 +5,22 @@
     $request = strtok($_SERVER['REQUEST_URI'],'?');
     session_start();
     switch($request){
-        case '/t3/':
+        case $_ENV['ROOT']:
             include __DIR__.'/views/home.php';
             break;
-        case '/t3/getdata.php':
+        case $_ENV['ROOT'].'getdata.php':
             include __DIR__."/src/getdata.php";
             break;
-        case '/t3/createtable.php':
+        case $_ENV['ROOT'].'createtable.php':
             include __DIR__.'/src/createtable.php';
             break;
-        case '/t3/importfile.php':
+        case $_ENV['ROOT'].'importfile.php':
             include __DIR__.'/src/importfile.php';
             break;
-        case '/t3/save.php':
+        case $_ENV['ROOT'].'save.php':
             include __DIR__.'/src/save.php';
             break;
-        case '/t3/clear.php':
+        case $_ENV['ROOT'].'clear.php':
             include __DIR__.'/src/clear.php';
             break;
         default:

@@ -3,17 +3,17 @@
    if($_SERVER['REQUEST_METHOD'] == 'GET'){
       include __DIR__.'/connect.php';
 
-      $usersTable = "CREATE TABLE IF NOT EXISTS `task3`.`users` 
+      $usersTable = "CREATE TABLE IF NOT EXISTS `".$_ENV['DB_NAME']."`.`users` 
          ( `id` INT NOT NULL , 
          `name` VARCHAR(255) NOT NULL , 
          PRIMARY KEY (`id`))";
       
-      $dealsTable = "CREATE TABLE IF NOT EXISTS `task3`.`deals` 
+      $dealsTable = "CREATE TABLE IF NOT EXISTS `".$_ENV['DB_NAME']."`.`deals`
          ( `id` INT NOT NULL , 
          `name` VARCHAR(255) NOT NULL , 
          PRIMARY KEY (`id`))";
 
-      $user_dealTable = "CREATE TABLE IF NOT EXISTS `task3`.`user_deal` 
+      $user_dealTable = "CREATE TABLE IF NOT EXISTS `".$_ENV['DB_NAME']."`.`user_deal` 
          ( `id` INT NOT NULL AUTO_INCREMENT , 
          `user_id` VARCHAR(255) NOT NULL , 
          `deal_id` VARCHAR(255) NOT NULL , 

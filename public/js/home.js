@@ -11,7 +11,7 @@ $(function(){
 
     $('#createTableBtn').click(function(){
         setStatusMsg('', 'creating tables...');
-        $.ajax(`${root}/createtable.php`)
+        $.ajax(`${root}createtable.php`)
         .done(function(){
             setStatusMsg('success', 'Tables created successfully!');
         })
@@ -34,7 +34,7 @@ $(function(){
         const formData = new FormData($('form')[0]);
         $('#fileUpload').val('');
         $.ajax({
-            url: `${root}/importfile.php`,
+            url: `${root}importfile.php`,
             data: formData,
             type: 'POST',
             contentType: false,
@@ -50,7 +50,7 @@ $(function(){
 
     $('#saveBtn').click(function(){
         setStatusMsg('', 'Saving File...');
-        $.ajax(`${root}/save.php`)
+        $.ajax(`${root}save.php`)
         .done(function(data){
             getData();
             setStatusMsg('success', 'File Saved successfully!');
@@ -62,7 +62,7 @@ $(function(){
 
     $('#clearBtn').click(function(){
         setStatusMsg('', 'clearing...');
-        $.ajax(`${root}/clear.php`)
+        $.ajax(`${root}clear.php`)
         .done(function(){
             $('#table').empty();
             displayData=[];
@@ -99,7 +99,7 @@ $(function(){
 
     const getData = ()=>{
         const selected = $('select').val();
-        $.ajax(`${root}/getdata.php?s=${selected}&limit=${limit}&page=${page}`)
+        $.ajax(`${root}getdata.php?s=${selected}&limit=${limit}&page=${page}`)
         .done(function(data){
             const parsedData = $.parseJSON(data);
             displayData = parsedData.data;
